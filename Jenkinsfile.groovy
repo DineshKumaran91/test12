@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('Build Tags') {
             when {
-                tag "2.0"
+                tag "release-*"
             }
             steps {
                 echo "Hello Build Tags"
