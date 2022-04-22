@@ -3,10 +3,10 @@ pipeline{
     stages {
         stage('Build Tags') {
             when {
-                tag "release-*"
+                changeRequest()
             }
-            steps {
-                echo "Hello Build Tags"
+            steps{
+                echo "Change request executed"
             }
         }
     }
